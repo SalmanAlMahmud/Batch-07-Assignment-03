@@ -13,3 +13,11 @@ Query 3:
 select booking_id,user_id,match_id,coalesce(payment_status, 'Action Required') as systematic_status
 from bookings
 where payment_status is null;
+
+Query 4:
+
+select booking_id,full_name,fixture,total_cost from bookings as b
+join users as u
+    on b.user_id = u.user_id
+join matches as m
+    on b.match_id = m.match_id
