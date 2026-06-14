@@ -24,9 +24,9 @@ join matches as m
 
 Query 5:
 
-select u.user_id,u.full_name,b.booking_id from users as u
+select user_id,full_name,booking_id from users as u
 left join bookings as b
-    on u.user_id=b.user_id
+    using (user_id)
 
 Query 6:
 
