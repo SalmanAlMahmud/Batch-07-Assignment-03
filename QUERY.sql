@@ -21,3 +21,9 @@ join users as u
     on b.user_id = u.user_id
 join matches as m
     on b.match_id = m.match_id
+
+Query 5:
+
+select u.user_id,u.full_name,b.booking_id from users as u
+left join bookings as b
+    on u.user_id=b.user_id
